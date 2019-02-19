@@ -1,0 +1,23 @@
+{
+    "name": "altivium/melisocialite",
+    "description": "Laravel Socialite Provider for Mercadolibre (MELI)",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+    	"laravel/socialite": "4.*",
+        "illuminate/support": "~5.7.0|~5.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Altivium\\MeliSocialite\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Altivium\\MeliSocialite\\MeliSocialiteServiceProvider"
+            ]
+        }
+    }
+}

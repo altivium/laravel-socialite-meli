@@ -12,7 +12,7 @@ Requirements
 MeliSocialite requiere la versión **Laravel v5.7+**
 **Socialite v4.0+**
 
-Install
+Instalación
 -------
 
 Para instalar via composer:
@@ -20,9 +20,11 @@ Para instalar via composer:
 composer require altivium/melisocialite
 ```
 
+Soporte
+-------
 
+Funciona para MercadoLibre:
 
-* [x] Soporte para MercadoLibre:
   * [x] Argentina 🇦🇷
   * [x] Bolivia 🇧🇴
   * [x] Brasil 🇧🇷
@@ -42,3 +44,8 @@ composer require altivium/melisocialite
   * [x] Salvador 🇸🇻
   * [x] Uruguay 🇺🇾
   * [x] Venezuela 🇻🇪
+  
+Licencia
+-------
+
+MIT © **[`Altivium SAS de CV`](https://altivium.com)**

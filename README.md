@@ -1,5 +1,6 @@
 MeliSocialite
 =======================
+[![version](https://img.shields.io/packagist/v/altivium/melisocialite.svg)](https://packagist.org/packages/altivium/melisocialite)
 [![license MIT](https://img.shields.io/packagist/l/altivium/melisocialite.svg)](https://opensource.org/licenses/MIT)
 
 

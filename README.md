@@ -4,8 +4,11 @@ MeliSocialite
 [![license MIT](https://img.shields.io/packagist/l/altivium/melisocialite.svg)](https://opensource.org/licenses/MIT)
 
 
-Laravel Socialite Provider para Mercadolibre, integra fácilmente la autenticación/autorización en Laravel, 
+Laravel Socialite Provider para Mercadolibre, integra fácilmente la autenticación/autorización en Laravel
+
 [Developers Mercadolibre](https://developers.mercadolibre.com.mx/es_ar/producto-autenticacion-autorizacion/)
+
+[Laravel Socialite](https://laravel.com/docs/5.7/socialite)
 
 Requirements
 ------------

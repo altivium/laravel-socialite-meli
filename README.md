@@ -1,8 +1,8 @@
 MeliSocialite
 =======================
-[![version](https://img.shields.io/packagist/v/altivium/melisocialite.svg)](https://packagist.org/packages/altivium/melisocialite)
-[![license MIT](https://img.shields.io/packagist/l/altivium/melisocialite.svg)](https://opensource.org/licenses/MIT)
-
+[![Latest Stable Version](https://poser.pugx.org/altivium/melisocialite/v/stable)](https://packagist.org/packages/altivium/melisocialite)
+[![License](https://poser.pugx.org/altivium/melisocialite/license)](https://packagist.org/packages/altivium/melisocialite)
+[![Total Downloads](https://poser.pugx.org/altivium/melisocialite/downloads)](https://packagist.org/packages/altivium/melisocialite)
 
 Laravel Socialite Provider para Mercadolibre, integra fácilmente la autenticación/autorización en Laravel
 

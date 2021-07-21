@@ -8,10 +8,10 @@ use Laravel\Socialite\Two\User;
 
 class MeliProvider extends AbstractProvider implements ProviderInterface
 {
-	protected $apiUrl = 'https://api.mercadolibre.com';
-	protected $oauthUrl = '/oauth/token';
-	protected $siteUrl = [
-		"MLA" => "https://auth.mercadolibre.com.ar", // Argentina 
+    protected $apiUrl = 'https://api.mercadolibre.com';
+    protected $oauthUrl = '/oauth/token';
+    protected $siteUrl = [
+        "MLA" => "https://auth.mercadolibre.com.ar", // Argentina
         "MLB" => "https://auth.mercadolivre.com.br", // Brasil
         "MCO" => "https://auth.mercadolibre.com.co", // Colombia
         "MCR" => "https://auth.mercadolibre.com.cr", // Costa Rica
@@ -24,18 +24,19 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
         "MPE" => "https://auth.mercadolibre.com.pe", // Peru
         "MPT" => "https://auth.mercadolibre.com.pt", // Portugal
         "MRD" => "https://auth.mercadolibre.com.do"  // Dominicana
-	];
+    ];
 
-	protected $siteId;
+    protected $siteId;
 
-	protected $authUrl;
+    protected $authUrl;
 
     protected function getAuthUrl($state)
     {
-    	if($this->siteId)
-    		$this->authUrl = $this->siteUrl[$this->siteId].'/authorization';
-    	else
-    		$this->authUrl = 'http://auth.mercadolibre.com/authorization';
+        if ($this->siteId) {
+            $this->authUrl = $this->siteUrl[$this->siteId].'/authorization';
+        } else {
+            $this->authUrl = 'http://auth.mercadolibre.com/authorization';
+        }
 
         return $this->buildAuthUrlFromBase($this->authUrl, $state);
     }
@@ -59,7 +60,9 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
     protected function getTokenFields($code)
     {
         return array_add(
-            parent::getTokenFields($code), 'grant_type', 'authorization_code'
+            parent::getTokenFields($code),
+            'grant_type',
+            'authorization_code'
         );
     }
 
@@ -77,14 +80,12 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
             'name'     => trim($user['first_name'].' '.$user['last_name']),
             'avatar'   => !empty($user['logo']) ? $user['logo'] : null,
             'email'    => (isset($user['email']))? $user['email'] : null,
-            //'site_id'  => $user['site_id']
         ]);
     }
 
     public function site($siteId)
     {
-    	$this->siteId = $siteId;
-    	return $this;
+        $this->siteId = $siteId;
+        return $this;
     }
-
 }

@@ -25,6 +25,22 @@ Para instalar via composer:
 ```php
 composer require altivium/melisocialite
 ```
+Configuración
+-------
+
+Agrega en el archivo config/services.php de Laravel la siguiente configuración
+
+```php
+<?php
+// config/services.php
+'meli' => [
+    'client_id' => env('MELI_CLIENT_ID'),
+    'client_secret' => env('MELI_CLIENT_SECRET'),
+    'redirect' => 'http://example.com/callback-url',
+],
+
+```
+No olvides setear en tu .env las variables MELI_CLIENT_ID y MELI_CLIENT_SECRET con los datos correspondientes a tu app de MercadoLibre
 
 Soporte
 -------

@@ -62,7 +62,8 @@ Route::get('/auth/callback', function () {
 Soporte
 -------
 
-
+Soporte
+Para 
   
 Licencia
 -------

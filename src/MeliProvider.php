@@ -79,7 +79,7 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
             'id' => $user['id'],
             'nickname' => $user['nickname'],
             'name' => trim($user['first_name'].' '.$user['last_name']),
-            'avatar' => ! empty($user['logo']) ? $user['logo'] : null,
+            'avatar' => !empty($user['logo']) ? $user['logo'] : null,
             'email' => (isset($user['email'])) ? $user['email'] : null,
         ]);
     }

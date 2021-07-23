@@ -2,8 +2,8 @@
 
 namespace Altivium\MeliSocialite;
 
-use Laravel\Socialite\SocialiteServiceProvider;
 use Laravel\Socialite\Contracts\Factory;
+use Laravel\Socialite\SocialiteServiceProvider;
 
 class MeliSocialiteServiceProvider extends SocialiteServiceProvider
 {

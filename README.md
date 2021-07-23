@@ -62,7 +62,27 @@ Route::get('/auth/callback', function () {
 Soporte
 -------
 
+Funciona para MercadoLibre:
 
+  * [x] Argentina 🇦🇷
+  * [x] Bolivia 🇧🇴
+  * [x] Brasil 🇧🇷
+  * [x] Chile 🇨🇱
+  * [x] Colombia 🇨🇴
+  * [x] Costa Rica 🇨🇷
+  * [x] Dominicana 🇩🇴
+  * [x] Ecuador 🇪🇨
+  * [x] Guatemala 🇬🇹
+  * [x] Honduras 🇭🇳
+  * [x] México 🇲🇽
+  * [x] Nicaragua 🇳🇮
+  * [x] Panamá 🇵🇦
+  * [x] Paraguay 🇵🇾
+  * [x] Perú 🇵🇪
+  * [x] Portugal 🇵🇹
+  * [x] Salvador 🇸🇻
+  * [x] Uruguay 🇺🇾
+  * [x] Venezuela 🇻🇪
   
 Licencia
 -------

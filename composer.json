@@ -1,8 +1,8 @@
 {
-    "name": "altivium/melisocialite",
+    "name": "altivium/laravel-socialite-meli",
     "description": "Laravel Socialite Provider for Mercadolibre (MELI)",
     "keywords": ["laravel", "socialite", "oauth2", "mercadolibre", "meli"],
-    "homepage": "https://github.com/altivium/MeliSocialite",
+    "homepage": "https://github.com/altivium/laravel-socialite-meli",
     "license": "MIT",
     "authors": [
         {

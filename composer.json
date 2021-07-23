@@ -2,24 +2,32 @@
     "name": "altivium/melisocialite",
     "description": "Laravel Socialite Provider for Mercadolibre (MELI)",
     "keywords": ["laravel", "socialite", "oauth2", "mercadolibre", "meli"],
-    "type": "library",
+    "homepage": "https://github.com/altivium/MeliSocialite",
     "license": "MIT",
     "authors": [
         {
             "name": "Altivium",
             "email": "dev@altivium.com"
+        },
+        {
+            "name": "Angel Martz",
+            "email": "angel@altivium.com",
+            "homepage": "https://altivium.com",
+            "role": "Developer"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+
     "require": {
-    	"laravel/socialite": "4.*|5.*",
-        "illuminate/support": "5.*|6.*|7.*|8.*"
+    	"laravel/socialite": "5.*",
+        "illuminate/support": "8.*"
     },
     "autoload": {
         "psr-4": {
-            "Altivium\\MeliSocialite\\": "src/"
+            "Altivium\\MeliSocialite\\": "src"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
@@ -27,5 +35,7 @@
                 "Altivium\\MeliSocialite\\MeliSocialiteServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

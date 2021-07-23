@@ -6,15 +6,17 @@ MeliSocialite
 
 Laravel Socialite Provider para Mercadolibre, integra fácilmente la autenticación/autorización en Laravel
 
-[Developers Mercadolibre](https://developers.mercadolibre.com.mx/es_ar/producto-autenticacion-autorizacion/)
+[Developers Mercadolibre](https://developers.mercadolibre.com/)
 
-[Laravel Socialite](https://laravel.com/docs/5.7/socialite)
+[Laravel Socialite](https://laravel.com/docs/8.x/socialite)
 
 Requirements
 ------------
 
-MeliSocialite requiere la versión **Laravel v5.7+**
-**Socialite v4.0+**
+MeliSocialite requiere la versión 
+**Laravel v8+**
+
+**Socialite v5.0+**
 
 Instalación
 -------

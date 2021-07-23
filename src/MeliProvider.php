@@ -23,7 +23,7 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
         "MPA" => "https://auth.mercadolibre.com.pa", // Panama
         "MPE" => "https://auth.mercadolibre.com.pe", // Peru
         "MPT" => "https://auth.mercadolibre.com.pt", // Portugal
-        "MRD" => "https://auth.mercadolibre.com.do"  // Dominicana
+        "MRD" => "https://auth.mercadolibre.com.do",  // Dominicana
     ];
 
     protected $siteId;
@@ -50,7 +50,7 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
     {
         $response = $this->getHttpClient()->post($this->getTokenUrl(), [
             'headers' => ['Accept' => 'application/json'],
-            'body'    => $this->getTokenFields($code),
+            'body' => $this->getTokenFields($code),
         ]);
 
 
@@ -68,24 +68,26 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
 
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get($this->apiUrl.'/users/me?'.http_build_query(['access_token'=>$token]));
+        $response = $this->getHttpClient()->get($this->apiUrl.'/users/me?'.http_build_query(['access_token' => $token]));
+
         return json_decode($response->getBody(), true);
     }
 
     protected function mapUserToObject(array $user)
     {
-        return (new User)->setRaw($user)->map([
-            'id'       => $user['id'],
+        return (new User())->setRaw($user)->map([
+            'id' => $user['id'],
             'nickname' => $user['nickname'],
-            'name'     => trim($user['first_name'].' '.$user['last_name']),
-            'avatar'   => !empty($user['logo']) ? $user['logo'] : null,
-            'email'    => (isset($user['email']))? $user['email'] : null,
+            'name' => trim($user['first_name'].' '.$user['last_name']),
+            'avatar' => ! empty($user['logo']) ? $user['logo'] : null,
+            'email' => (isset($user['email'])) ? $user['email'] : null,
         ]);
     }
 
     public function site($siteId)
     {
         $this->siteId = $siteId;
+
         return $this;
     }
 }

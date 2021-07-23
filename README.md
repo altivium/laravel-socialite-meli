@@ -42,6 +42,23 @@ Agrega en el archivo config/services.php de Laravel la siguiente configuración
 ```
 No olvides setear en tu .env las variables MELI_CLIENT_ID y MELI_CLIENT_SECRET con los datos correspondientes a tu app de MercadoLibre
 
+En tus controladores y/o rutas ya puedes usarlo de la siguiente forma
+
+```php
+use Laravel\Socialite\Facades\Socialite;
+
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('meli')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $user = Socialite::driver('meli')->user();
+
+    // $user->token
+});
+
+```
+
 Soporte
 -------
 

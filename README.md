@@ -1,14 +1,14 @@
 MeliSocialite
 =======================
-[![Latest Stable Version](https://poser.pugx.org/altivium/melisocialite/v/stable)](https://packagist.org/packages/altivium/melisocialite)
-[![License](https://poser.pugx.org/altivium/melisocialite/license)](https://packagist.org/packages/altivium/melisocialite)
-[![Total Downloads](https://poser.pugx.org/altivium/melisocialite/downloads)](https://packagist.org/packages/altivium/melisocialite)
+[![Latest Stable Version](https://poser.pugx.org/altivium/laravel-socialite-meli/v/stable)](https://packagist.org/packages/altivium/laravel-socialite-meli)
+[![License](https://poser.pugx.org/altivium/laravel-socialite-meli/license)](https://packagist.org/packages/altivium/laravel-socialite-meli)
+[![Total Downloads](https://poser.pugx.org/altivium/laravel-socialite-meli/downloads)](https://packagist.org/packages/altivium/laravel-socialite-meli)
 
 Laravel Socialite Provider para Mercadolibre, integra fácilmente la autenticación/autorización en Laravel
 
 [Developers Mercadolibre](https://developers.mercadolibre.com/)
 
-[Laravel Socialite](https://laravel.com/docs/8.x/socialite)
+[Laravel Socialite](https://laravel.com/docs/socialite)
 
 Requirements
 ------------
@@ -23,7 +23,7 @@ Instalación
 
 Para instalar via composer:
 ```php
-composer require altivium/melisocialite
+composer require altivium/laravel-socialite-meli
 ```
 Configuración
 -------
@@ -36,7 +36,7 @@ Agrega en el archivo config/services.php de Laravel la siguiente configuración
 'meli' => [
     'client_id' => env('MELI_CLIENT_ID'),
     'client_secret' => env('MELI_CLIENT_SECRET'),
-    'redirect' => 'http://example.com/callback-url',
+    'redirect' => env('MELI_REDIRECT'),
 ],
 
 ```

@@ -28,7 +28,7 @@ composer require altivium/laravel-socialite-meli
 Configuración
 -------
 
-Agrega en el archivo config/services.php de Laravel la siguiente configuración
+El paquete ya agrega el siguiente arreglo de configuración en services
 
 ```php
 <?php
@@ -40,7 +40,20 @@ Agrega en el archivo config/services.php de Laravel la siguiente configuración
 ],
 
 ```
-No olvides setear en tu .env las variables MELI_CLIENT_ID y MELI_CLIENT_SECRET con los datos correspondientes a tu app de MercadoLibre
+No olvides setear en tu .env las variables MELI_CLIENT_ID, MELI_CLIENT_SECRET, MELI_REDIRECT con los datos correspondientes a tu app de MercadoLibre
+
+Debido al orden en que se cargan los paquetes podrias obtener el mensaje Driver [meli] not found, en ese caso asegurate de registrar el Service Provider en tu archivo config/app.php de laravel
+
+```php
+<?php
+// config/app.php
+    'providers' => [ // ......
+        /*
+         * Package Service Providers...
+         */
+        Altivium\MeliSocialite\MeliSocialiteServiceProvider::class
+
+```
 
 En tus controladores y/o rutas ya puedes usarlo de la siguiente forma
 

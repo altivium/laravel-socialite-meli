@@ -31,6 +31,5 @@ class MeliSocialiteManagerTest extends TestCase
         $provider = $factory->driver('meli');
 
         $this->assertInstanceOf(MeliProvider::class, $provider);
-
     }
 }

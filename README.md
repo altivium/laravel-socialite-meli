@@ -1,4 +1,4 @@
-MeliSocialite
+laravel-socialite-meli
 =======================
 [![Latest Stable Version](https://poser.pugx.org/altivium/laravel-socialite-meli/v/stable)](https://packagist.org/packages/altivium/laravel-socialite-meli)
 [![License](https://poser.pugx.org/altivium/laravel-socialite-meli/license)](https://packagist.org/packages/altivium/laravel-socialite-meli)

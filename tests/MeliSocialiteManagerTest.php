@@ -2,10 +2,9 @@
 
 namespace Laravel\Socialite\Tests;
 
+use Altivium\MeliSocialite\MeliProvider;
 use Laravel\Socialite\Contracts\Factory;
 use Laravel\Socialite\SocialiteServiceProvider;
-use Altivium\MeliSocialite\MeliProvider;
-use Laravel\Socialite\Two\GithubProvider;
 use Orchestra\Testbench\TestCase;
 
 class MeliSocialiteManagerTest extends TestCase

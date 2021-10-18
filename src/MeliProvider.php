@@ -68,8 +68,8 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
     {
         $response = $this->getHttpClient()->get($this->apiUrl.'/users/me', [
             'headers' => [
-                'Authorization' => 'Bearer '.$token
-            ]
+                'Authorization' => 'Bearer '.$token,
+            ],
         ]);
 
         return json_decode($response->getBody(), true);

@@ -22,7 +22,6 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
         "MLV" => "https://auth.mercadolibre.com.ve", // Venezuela
         "MPA" => "https://auth.mercadolibre.com.pa", // Panama
         "MPE" => "https://auth.mercadolibre.com.pe", // Peru
-        "MPT" => "https://auth.mercadolibre.com.pt", // Portugal
         "MRD" => "https://auth.mercadolibre.com.do",  // Dominicana
     ];
 
@@ -49,8 +48,7 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
     protected function getAccessToken($code)
     {
         $response = $this->getHttpClient()->post($this->getTokenUrl(), [
-            'headers' => ['Accept' => 'application/json'],
-            'body' => $this->getTokenFields($code),
+            'form_params' => $this->getTokenFields($code),
         ]);
 
 
@@ -68,7 +66,11 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
 
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get($this->apiUrl.'/users/me?'.http_build_query(['access_token' => $token]));
+        $response = $this->getHttpClient()->get($this->apiUrl.'/users/me', [
+            'headers' => [
+                'Authorization' => 'Bearer '.$token
+            ]
+        ]);
 
         return json_decode($response->getBody(), true);
     }

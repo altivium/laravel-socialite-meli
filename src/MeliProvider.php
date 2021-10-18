@@ -55,15 +55,6 @@ class MeliProvider extends AbstractProvider implements ProviderInterface
         return $this->parseAccessToken($response->getBody());
     }
 
-    protected function getTokenFields($code)
-    {
-        return array_add(
-            parent::getTokenFields($code),
-            'grant_type',
-            'authorization_code'
-        );
-    }
-
     protected function getUserByToken($token)
     {
         $response = $this->getHttpClient()->get($this->apiUrl.'/users/me', [
